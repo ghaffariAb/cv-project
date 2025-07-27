@@ -1,0 +1,363 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --border-color: #ddd;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.builder-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.form-section, .preview-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.btn-primary, .btn-secondary, .btn-danger {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: #dfe6e9;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.form-actions, .preview-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cv-preview {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    min-height: 800px;
+    margin-bottom: 20px;
+}
+
+.cv-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #999;
+    font-style: italic;
+}
+
+/* CV Template Styles */
+.cv-template {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cv-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+
+.cv-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 3px solid var(--primary-color);
+}
+
+.cv-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.cv-profession {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.cv-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.cv-contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.cv-contact-item i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.cv-section {
+    margin-bottom: 25px;
+}
+
+.cv-section-title {
+    font-size: 20px;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.cv-about {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cv-education-item, .cv-experience-item {
+    margin-bottom: 20px;
+}
+
+.cv-education-degree, .cv-experience-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cv-education-institution, .cv-experience-company {
+    font-style: italic;
+    color: #555;
+}
+
+.cv-education-year, .cv-experience-duration {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.cv-experience-description {
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.cv-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cv-skill {
+    background-color: var(--light-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Dynamic entries */
+.education-entry, .experience-entry {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.remove-education, .remove-experience {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 3px 8px;
+    font-size: 12px;
+}
+
+.skills-container {
+    margin-top: 15px;
+}
+
+.skill-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-input input {
+    flex: 1;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: var(--light-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-tag button {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Print styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .cv-preview, .cv-preview * {
+        visibility: visible;
+    }
+    .cv-preview {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        padding: 0;
+    }
+    .preview-actions {
+        display: none;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .builder-container {
+        flex-direction: column;
+    }
+    
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cv-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .form-actions, .preview-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary, .btn-danger {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
